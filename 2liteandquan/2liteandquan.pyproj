@@ -12,6 +12,9 @@
     <Name>2liteandquan</Name>
     <RootNamespace>2liteandquan</RootNamespace>
     <InterpreterId>CondaEnv|CondaEnv|tensorflow-gpu</InterpreterId>
+    <TestFramework>pytest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,6 +27,9 @@
   <ItemGroup>
     <Compile Include="2liteandquan.py" />
     <Compile Include="MINSTmodeltrain.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testlite.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
